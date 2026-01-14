@@ -29,7 +29,7 @@ app.add_middleware(
 )
 
 # Include routers
-app.include_router(employee_router.router, prefix="/api", tags=["employees"])
+app.include_router(employee_router.router, prefix="/api/v1", tags=["employees"])
 
 
 @app.get("/")

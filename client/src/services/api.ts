@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api/employees';
+const MODE = import.meta.env.VITE_MODE || 'development';
+const API_URL = MODE === 'production' 
+    ? import.meta.env.VITE_API_PROD_URL 
+    : import.meta.env.VITE_API_DEV_URL;
 
 export const fetchEmployees = async (query: string, limit: number = 8, offset: number = 0) => {
     try {

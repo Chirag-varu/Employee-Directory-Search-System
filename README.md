@@ -41,11 +41,10 @@ Employee Directory Search System/
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **React 18** with TypeScript
-- **Vite** for fast development
+- **Vite React 18** with TypeScript for fast development
 - **TailwindCSS** for styling
 - **shadcn/ui** for UI components
-- **Axios** for HTTP requests
+- **Axios** for server requests
 - **Lucide React** for icons
 
 ### Backend
@@ -252,15 +251,6 @@ query = db.query(Employee).filter(
 - **Caching Potential**: Easy to add Redis/Memcached at service layer
 - **Benefit**: Clean code, easy to optimize individual layers
 
-### Performance Metrics
-
-| Metric | Before Optimization | After Optimization |
-|--------|-------------------|-------------------|
-| API Calls (typing "employee") | 8 calls | 1 call |
-| Search Query Time | 150-300ms | <10ms |
-| Data Transfer (50 employees) | 50 records | 8 records |
-| Database Load | High (sequential scans) | Low (index scans) |
-
 ---
 
 ## 🎨 Frontend Architecture
@@ -338,87 +328,7 @@ Create a new employee (future enhancement)
 
 ---
 
-## 🧪 Testing the Application
-
-1. **Start Backend**: `python run.py` (in server directory)
-2. **Start Frontend**: `npm run dev` (in client directory)
-3. **Open Browser**: Navigate to `http://localhost:5173`
-4. **Test Search**: Type in the search bar and observe debounced API calls
-5. **Test Pagination**: Click "Next" and "Previous" buttons
-
----
-
-## 📝 Assignment Requirements Fulfilled
-
-### Frontend Tasks ✅
-
-1. **Employee Search (Performance-Oriented)**
-   - ✅ Debounced search (500ms delay)
-   - ✅ No API call per character
-   - ✅ Controlled, optimized API requests
-
-2. **API State Handling**
-   - ✅ Loading state with spinner
-   - ✅ Error state with alert
-   - ✅ Empty state with message
-   - ✅ Success state with data
-
-3. **Component Structure & Reusability**
-   - ✅ SearchBar (reusable)
-   - ✅ EmployeeCard (reusable)
-   - ✅ EmployeeList (reusable)
-   - ✅ API logic separated from UI
-
-4. **Environment Configuration**
-   - ✅ `.env.local` for backend URL
-   - ✅ No hardcoded API URLs
-
-### Backend Tasks ✅
-
-1. **Database Design & Connection**
-   - ✅ MySQL database
-   - ✅ Proper `employees` table
-   - ✅ SQLAlchemy with connection pooling
-   - ✅ Explanation of approach (see above)
-
-2. **Employee Search API**
-   - ✅ GET `/api/employees?search=...`
-   - ✅ Searches name and department
-   - ✅ Efficient with indexes
-   - ✅ Pagination (LIMIT/OFFSET)
-
-3. **Validation & Error Handling**
-   - ✅ Query parameter validation (Pydantic)
-   - ✅ Proper HTTP status codes
-   - ✅ Clear error messages
-
-4. **Clean Architecture**
-   - ✅ Routers (API endpoints)
-   - ✅ Services (business logic)
-   - ✅ Repositories (database layer)
-   - ✅ Easy to extend
-
----
-
-## 🚀 Future Enhancements
-
-- [ ] Add employee creation/update/delete
-- [ ] Implement Redis caching for frequent searches
-- [ ] Add department filters
-- [ ] Export employee data (CSV/PDF)
-- [ ] User authentication & authorization
-- [ ] Advanced search with multiple filters
-- [ ] Employee profile pages
-- [ ] Batch operations
-
----
-
-## 📄 License
-
-This project is created for educational purposes.
-
----
-
 ## 👤 Author
 
+This project is created for educational purposes.
 Created as part of an SDE assignment demonstrating full-stack development skills with a focus on performance optimization and clean architecture.

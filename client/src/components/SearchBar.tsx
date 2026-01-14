@@ -20,7 +20,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearchChange, value }) => {
                 placeholder="Search by name or department..."
                 value={value}
                 onChange={handleChange}
-                className="w-full pl-10 py-6 text-base"
+                className="w-full pl-10 py-5 sm:py-6 text-sm sm:text-base  dark:bg-slate-900 text-slate-900 dark:text-slate-100 border-slate-200 dark:border-slate-700 placeholder:text-slate-500 dark:placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-0 dark:focus-visible:ring-slate-400 transition-all shadow-sm"
             />
         </div>
     );
