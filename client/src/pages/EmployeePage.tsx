@@ -1,8 +1,8 @@
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import EmployeeDetail from '../components/EmployeeDetail';
 
 const EmployeePage = () => {
-    const { id } = useParams<{ id: string }>();
+    // const { id } = useParams<{ id: string }>();
 
     return (
         <div>

@@ -16,17 +16,17 @@ export const EmployeeCard: React.FC<EmployeeCardProps> = ({ employee }) => {
             </CardHeader>
             <CardContent className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
                 <div className="flex items-center gap-2 sm:gap-3">
-                    <Briefcase className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-muted-foreground flex-shrink-0" />
+                    <Briefcase className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-muted-foreground shrink-0" />
                     <span className="truncate">{employee.department}</span>
                 </div>
                 <div className="flex items-center gap-2 sm:gap-3">
-                    <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-muted-foreground flex-shrink-0" />
+                    <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-muted-foreground shrink-0" />
                     <a href={`mailto:${employee.email}`} className="hover:text-primary transition-colors truncate">
                         {employee.email}
                     </a>
                 </div>
                 <div className="flex items-center gap-2 sm:gap-3">
-                    <Calendar className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-muted-foreground flex-shrink-0" />
+                    <Calendar className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-muted-foreground shrink-0" />
                     <span className="truncate">Joined: {new Date(employee.date_of_joining).toLocaleDateString()}</span>
                 </div>
             </CardContent>
