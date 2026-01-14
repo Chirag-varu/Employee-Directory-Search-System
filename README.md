@@ -12,7 +12,23 @@ A full-stack employee directory application with optimized search functionality,
 - **State Management**: Proper use of React state and props
 - **API State Handling**: Loading, error, and empty states
 - **Environment-based** configuration (no hardcoded URLs or credentials)
+---
+## ScreenShot
+![alt text](client/public/image.png)
 
+---
+### Search by name
+![alt text](image-1.png)
+
+---
+### Search by department
+![alt text](image-2.png)
+
+---
+### No user Found:
+![alt text](image.png)
+
+---
 ## 📁 Project Structure
 
 ```
@@ -66,9 +82,40 @@ Employee Directory Search System/
 - Python (v3.12+) - *Only if running locally*
 - MySQL database (local or cloud instance like Aiven) - *Only if running locally*
 - **Docker Desktop** - *Required for Docker setup*
+---
+
+### Frontend Setup
+
+1. **Navigate to client directory**
+```powershell
+cd client
+```
+
+2. **Install dependencies**
+```powershell
+npm install
+```
+
+3. **Configure environment variables**
+
+Create a `.env.local` file in the `client` directory:
+
+```env
+VITE_MODE=development
+VITE_API_DEV_URL=http://localhost:8000/api/v1/employees
+VITE_API_PROD_URL=https://your-production-api.com/api/v1/employees
+```
+
+4. **Start the development server**
+```powershell
+npm run dev
+```
+
+The application will be available at: `http://localhost:5173`
 
 ---
 
+### Backend Setup
 ## 🐳 Quick Start with Docker (Recommended)
 
 The easiest way to run the backend API is using our pre-built Docker image with test environment included.
@@ -115,21 +162,17 @@ docker stop employee-api
 
 If you want to develop or modify the backend locally:
 
----
-
-### Backend Setup
-
 1. **Navigate to server directory**
 ```powershell
 cd server
 ```
 
-2. **Install Python dependencies**
+1. **Install Python dependencies**
 ```powershell
 pip install -r requirements.txt
 ```
 
-3. **Configure environment variables**
+1. **Configure environment variables**
 
 Create a `.env` file in the `server` directory:
 
@@ -163,59 +206,6 @@ python run.py
 The API will be available at: `http://localhost:8000`
 - API Documentation: `http://localhost:8000/docs`
 - Health Check: `http://localhost:8000/health`
-
----
-
-## 🚀 Running the Complete Application
-
-### Option 1: Docker Backend + Local Frontend (Recommended)
-
-**Terminal 1 - Start Backend (Docker):**
-```powershell
-docker run -p 8000:8000 vchirag/employee-directory-api:latest
-```
-
-**Terminal 2 - Start Frontend:**
-```powershell
-cd client
-npm install
-npm run dev
-```
-
-Access the application at: `http://localhost:5173`
-
-### Option 2: Both Running Locally
-
-Follow the "Local Development Setup" sections above for both backend and frontend.
-
----
-
-### Frontend Setup
-
-1. **Navigate to client directory**
-```powershell
-cd client
-```
-
-2. **Install dependencies**
-```powershell
-npm install
-```
-
-3. **Configure environment variables**
-
-Create a `.env.local` file in the `client` directory:
-
-```env
-VITE_API_BASE_URL=http://localhost:8000/api
-```
-
-4. **Start the development server**
-```powershell
-npm run dev
-```
-
-The application will be available at: `http://localhost:5173`
 
 ---
 
