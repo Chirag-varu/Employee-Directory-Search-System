@@ -14,9 +14,15 @@ env/
 ENV/
 .venv
 
-# Environment files
-.env
+# Environment files (commented out for demo/test environment)
+# .env
 .env.local
+
+# SSL/TLS Certificates (commented out for demo/test environment)
+# ca.pem
+# *.pem
+*.crt
+*.key
 
 # IDE
 .vscode/

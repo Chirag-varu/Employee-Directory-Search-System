@@ -11,6 +11,7 @@ A full-stack employee directory application with optimized search functionality,
 - **Clean Architecture**: Layered architecture with Repository Pattern
 - **State Management**: Proper use of React state and props
 - **API State Handling**: Loading, error, and empty states
+- **Environment-based** configuration (no hardcoded URLs or credentials)
 
 ## 📁 Project Structure
 
@@ -62,8 +63,57 @@ Employee Directory Search System/
 
 ### Prerequisites
 - Node.js (v18+)
-- Python (v3.12+)
-- MySQL database (local or cloud instance like Aiven)
+- Python (v3.12+) - *Only if running locally*
+- MySQL database (local or cloud instance like Aiven) - *Only if running locally*
+- **Docker Desktop** - *Required for Docker setup*
+
+---
+
+## 🐳 Quick Start with Docker (Recommended)
+
+The easiest way to run the backend API is using our pre-built Docker image with test environment included.
+
+### Prerequisites
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running
+
+### Steps
+
+1. **Pull the Docker image from Docker Hub**
+```powershell
+docker pull vchirag/employee-directory-api:latest
+```
+
+2. **Run the container**
+```powershell
+docker run -p 8000:8000 vchirag/employee-directory-api:latest
+```
+
+3. **Access the API**
+- API: http://localhost:8000
+- Documentation: http://localhost:8000/docs
+- Health Check: http://localhost:8000/health
+
+**That's it!** The Docker image includes:
+- ✅ Pre-configured test database connection
+- ✅ SSL certificates (ca.pem)
+- ✅ 50 sample employees
+- ✅ All dependencies installed
+
+**Optional: Run in detached mode (background)**
+```powershell
+docker run -d -p 8000:8000 --name employee-api vchirag/employee-directory-api:latest
+```
+
+**Stop the container**
+```powershell
+docker stop employee-api
+```
+
+---
+
+## 💻 Local Development Setup (Alternative)
+
+If you want to develop or modify the backend locally:
 
 ---
 
@@ -113,6 +163,30 @@ python run.py
 The API will be available at: `http://localhost:8000`
 - API Documentation: `http://localhost:8000/docs`
 - Health Check: `http://localhost:8000/health`
+
+---
+
+## 🚀 Running the Complete Application
+
+### Option 1: Docker Backend + Local Frontend (Recommended)
+
+**Terminal 1 - Start Backend (Docker):**
+```powershell
+docker run -p 8000:8000 vchirag/employee-directory-api:latest
+```
+
+**Terminal 2 - Start Frontend:**
+```powershell
+cd client
+npm install
+npm run dev
+```
+
+Access the application at: `http://localhost:5173`
+
+### Option 2: Both Running Locally
+
+Follow the "Local Development Setup" sections above for both backend and frontend.
 
 ---
 
