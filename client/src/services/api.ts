@@ -14,6 +14,12 @@ export const fetchEmployees = async (query: string, limit: number = 8, offset: n
                 offset: offset
             }
         });
+        console.log('=response===================================');
+        console.log(response);
+        console.log('====================================');
+        console.log('=response.data===================================');
+        console.log(response.data);
+        console.log('====================================');
         return response.data;
     } catch (error) {
         console.error('Error fetching employees:', error);

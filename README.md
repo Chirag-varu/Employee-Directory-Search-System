@@ -75,6 +75,21 @@ Employee Directory Search System/
 ### Database
 - **MySQL** (via Aiven Cloud)
 
+---
+
+## 🔑 Key Architectural Highlights
+
+| Feature | Description |
+|---------|-------------|
+| **☁️ Cloud MySQL (Aiven)** | Production-grade MySQL database hosted on Aiven Cloud with SSL encryption, automatic backups, and high availability |
+| **🔧 Centralized API Management** | Environment-based API configuration (`VITE_MODE`) to seamlessly switch between development and production endpoints |
+| **🔍 Combined Search Query** | Single optimized SQL query using `OR` clause to search across multiple fields (name, department) efficiently |
+| **📘 TypeScript** | Full type safety in the frontend with TypeScript for better developer experience and fewer runtime errors |
+| **🏛️ Repository Pattern** | Clean separation of concerns with Router → Service → Repository layers for maintainability and testability |
+| **📌 API Versioning** | Versioned API endpoints (`/api/v1/employees`) for backward compatibility and smooth API evolution |
+
+---
+
 ## 📦 Setup Instructions
 
 ### Prerequisites
