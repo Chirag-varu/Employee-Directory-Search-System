@@ -9,10 +9,10 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { Loader2, ServerCrash, UserX, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const ITEMS_PER_PAGE = 8;
+const ITEMS_PER_PAGE = Number(import.meta.env.VITE_ITEMS_PER_PAGE) || 8;
 
 const Home: React.FC = () => {
-    const [employees, setEmployees] = useState<Employee[]>([]);
+    const [employees, setEmployees] = useState<any[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
     const [searchTerm, setSearchTerm] = useState('');
@@ -26,6 +26,9 @@ const Home: React.FC = () => {
         try {
             const offset = (page - 1) * ITEMS_PER_PAGE;
             const data = await fetchEmployees(search, ITEMS_PER_PAGE, offset);
+            console.log('=234===================================');
+            console.log(data);
+            console.log('==12412==================================');
             setEmployees(data);
         } catch (err) {
             setError('Failed to fetch employees. Is the backend server running?');
