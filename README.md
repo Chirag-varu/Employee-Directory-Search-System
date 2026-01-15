@@ -18,15 +18,15 @@ A full-stack employee directory application with optimized search functionality,
 
 ---
 ### Search by name
-![alt text](image-1.png)
+![alt text](client/public/image-1.png)
 
 ---
 ### Search by department
-![alt text](image-2.png)
+![alt text](client/public/image-2.png)
 
 ---
 ### No user Found:
-![alt text](image.png)
+![alt text](client/public/image-3.png)
 
 ---
 ## 📁 Project Structure

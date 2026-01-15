@@ -13,6 +13,9 @@ const EmployeeDetail: React.FC = () => {
         const fetchEmployeeDetail = async () => {
             try {
                 const data = await fetchEmployeeById(id);
+                console.log('====================================');
+                console.log(data);
+                console.log('====================================');
                 setEmployee(data);
             } catch (err: any) {
                 setError('Failed to fetch employee details');
