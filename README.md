@@ -2,6 +2,17 @@
 
 A full-stack employee directory application with optimized search functionality, built with React + Vite (Frontend) and Python + FastAPI (Backend).
 
+## 🌐 Live Demo
+
+**🔗 [https://eds.chiragvaru.me/](https://eds.chiragvaru.me/)**
+
+| Service | Platform |
+|---------|----------|
+| Frontend | Vercel |
+| Backend | Render |
+
+---
+
 ## 🚀 Features
 
 - **Optimized Search**: Debounced search with controlled API requests

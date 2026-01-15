@@ -26,9 +26,6 @@ const Home: React.FC = () => {
         try {
             const offset = (page - 1) * ITEMS_PER_PAGE;
             const data = await fetchEmployees(search, ITEMS_PER_PAGE, offset);
-            console.log('=234===================================');
-            console.log(data);
-            console.log('==12412==================================');
             setEmployees(data);
         } catch (err) {
             setError('Failed to fetch employees. Is the backend server running?');
