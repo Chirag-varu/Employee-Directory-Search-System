@@ -3,7 +3,7 @@ import SearchBar from '../components/SearchBar';
 import EmployeeList from '../components/EmployeeList';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { fetchEmployees } from '../services/api';
-import type { Employee } from '../types/index';
+// import type { Employee } from '../types/index';
 import { useDebounce } from '../hooks/useDebounce';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
