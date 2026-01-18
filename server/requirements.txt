@@ -5,3 +5,5 @@ pymysql>=1.1.0
 python-dotenv>=1.0.0
 pydantic[email]>=2.0.0
 cryptography
+apscheduler>=3.10.0
+httpx>=0.25.0
