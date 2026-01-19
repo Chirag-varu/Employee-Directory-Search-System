@@ -8,7 +8,7 @@ load_dotenv()
 # Database configuration from environment variables
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "mysql+pymysql://root:password@localhost:3306/employee_directory"
+    os.getenv("DEFAULT_DB_URL", "")
 )
 
 # Create SQLAlchemy engine
