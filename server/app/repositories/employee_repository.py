@@ -30,17 +30,16 @@ class EmployeeRepository:
         2. Limiting results to prevent large data transfers
         3. Using offset for pagination
         """
+        keywords = search.lower().split() if search else []
         query = self.db.query(Employee)
-
-        if search:
-            search_term = f"%{search}%"
+        for kw in keywords:
             query = query.filter(
                 or_(
-                    Employee.name.ilike(search_term),
-                    Employee.department.ilike(search_term)
+                    Employee.name.ilike(f"%{kw}%"),
+                    Employee.department.ilike(f"%{kw}%")
                 )
             )
-
+    
         return query.order_by(Employee.name).offset(offset).limit(limit).all()
 
     def get_by_id(self, employee_id: int) -> Optional[Employee]:

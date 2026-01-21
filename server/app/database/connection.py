@@ -13,7 +13,7 @@ DATABASE_URL = os.getenv(
 
 # Create SQLAlchemy engine
 # pool_pre_ping: Enables connection health checks before using a connection
-# pool_recycle: Recycles connections after 3600 seconds to prevent stale connections
+# pool_recycle: Recycles connections after 3600 seconds(1 hour) to prevent stale connections
 # This approach is suitable because:
 # 1. Connection pooling improves performance by reusing connections
 # 2. Pre-ping ensures we don't use dead connections
@@ -25,7 +25,7 @@ engine = create_engine(
     echo=False  # Set to True for SQL query logging during development
 )
 
-# Session factory for creating database sessions
+#    for creating database sessions
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Base class for declarative models
